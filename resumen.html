@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="hydra.js"></script>
+    <style>
+        body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+ 
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.cuerpo {
+    position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color:#ffffffa6;
+  padding: 3%;
+  padding-top: 5%;
+
+}
+
+.citas {
+
+    padding-left: 2%;
+    font-family: Roboto;
+    padding-right: 30px !important;
+
+
+}
+.citas p {
+
+padding-top: 15px;
+font-family: monospace ;
+ 
+color: rgb(22, 22, 22);
+font-size: 23px;
+
+}
+
+.citas span {
+
+    font-family: roboto,  monospace;
+}
+
+p{
+    font-family: monospace;
+
+}
+
+    </style>
+</head>
+<body>
+<div>
+    <!--
+        shape(.9,.89)
+  .mult(osc(6,0.5,1))
+  .rotate( 3, 4,2).kaleid(() => Math.cos(70))
+  .modulateRepeat(osc(40), 2.0, 6.0, 0.5, 0.5)
+  .pixelate(70, 20, 28).hue(() => Math.sin(time))
+  .out(o0)
+    -->
+
+    <div  class="cuerpo">
+    <h2>Metaformas para un Cuerpo imaginario.</h2>
+   <i> Desautomatizar la percepción </i>
+
+   <blockquote class="citas">
+    <pre>
+    “Meaning lies as much
+in the mind of the reader
+as in the Haiku.”</pre> <span>
+― Douglas R. Hofstadter, Gödel, Escher, Bach: An Eternal Golden Braid
+   </span>
+  <!-- <p>
+    "A nivel cuántico, las partículas entrelazadas parecen influenciarse a distancia.
+La influencia parece ser más rápida que la luz, lo que sugiere que se podría 
+estar transfiriendo información de manera simultanea. 
+Podría ser necesario recurrir a algo como la telepatía o la causalidad hacia atrás
+en el tiempo para seguir creyendo en la ontología de partículas discretas."
+</p>
+<p>
+    La relatividad es lo que garantiza que los objetos nunca son lo que parecen, y no porque sean ideas en mi cabeza, sino porque no lo son. Los objetos grandes emiten campos gravitatorios que curvan la luz, dando lugar al corrimiento hacia el rojo de estrellas distantes que permaneció como un misterio hasta que Einstein propuso la teoría de la relatividad. El espacio-tiempo no es una caja vacía, sino más bien un campo de fuerza ondulante que emana de los objetos. Ahora, lo que sucede con la temporalidad ondulante es que realmente es mediblemente obvia en hiperobjetos, objetos que son masivos desde el punto de vista humano.
+</p>
+<p>
+    Las brechas que percibo entre los momentos en los que mi mente es consciente del hiperobjeto y los momentos en los que no lo está, no están inherentemente en el hiperobjeto en sí mismo. Esto no es simplemente una cuestión de mi conciencia "subjetiva" versus un mundo "objetivo". Lo mismo puede decirse de los objetos físicos que son de menor dimensión que el hiperobjeto en cuestión. Las brechas que experimenta una ciudad entre ser asediada por un conjunto de tornados y otro no marcan una brecha de vacío entre dos hiperobjetos, o incluso dentro de uno.
+</p> -->
+<p>
+    La mecánica cuántica plantea la posibilidad de influencia a distancia entre partículas entrelazadas, incluso a velocidades superiores a la de la luz, lo que podría desafiar la ontología de partículas discretas. La relatividad, por su parte, demuestra que los objetos no son lo que parecen y emiten campos gravitatorios que curvan la luz, lo que se evidencia en la observación de estrellas distantes. En este sentido, el espacio-tiempo no es una caja vacía sino un campo de fuerza ondulante que emana de los objetos, especialmente en aquellos que son masivos para los seres humanos, conocidos como hiperobjetos. Las brechas percibidas en la conciencia de estos objetos no son inherentes a ellos, sino que se presentan en objetos físicos de menor dimensión.
+</p>
+<p>
+    El proyecto consiste en la creación de una plataforma en línea que permita la exploración de hiperobjetos a través de código creativo y la utilización de diferentes tecnologías. La plataforma integraría realidad virtual en navegador, realidad aumentada y un sintetizador de colores luz para generar una experiencia inmersiva y multidimensional. Al ingresar al sitio web, el usuario tendría acceso a una vista mapeada del entorno y condiciones actuales que le permitirían interactuar con diferentes hiperobjetos. A través de la realidad virtual en navegador, el usuario podría explorar objetos masivos en su escala real, mientras que la realidad aumentada permitiría la superposición de información relevante para una experiencia más enriquecedora. El sintetizador de colores luz permitiría la creación de atmósferas acordes a la naturaleza de cada hiperobjeto, generando una experiencia audiovisual única. La plataforma estaría diseñada para ser accesible desde cualquier dispositivo con acceso a internet y a un navegador, permitiendo una amplia difusión del concepto de hiperobjetos y su comprensión multidimensional.
+</p>
+</blockquote>
+
+
+
+   
+</div>
+<script>
+    // create a new hydra-synth instance
+    var hydra = new Hydra({
+        detectAudio: false
+      });
+   
+   
+      //make canvas resize with browser
+      hydra.setResolution(window.innerWidth, window.innerHeight);
+     console.log(hydra);
+   
+     window.addEventListener("resize", evt => {
+       hydra.setResolution(window.innerWidth, window.innerHeight);
+     });
+   </script>
+   <script>
+    voronoi(10,1,5).brightness(()=>Math.random()*0.15)
+  .modulatePixelate(noise(25,0.5),100)
+  .out(o0)
+   </script>
+</body>
+</html>
